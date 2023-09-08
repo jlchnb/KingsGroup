@@ -30,6 +30,7 @@
     "@ionic/angular": "^7.3.2",
     "@ionic/core": "^7.3.2",
     "@ionic/lab": "^3.2.15",
+    "boostrap": "^2.0.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "swiper": "^10.2.0",

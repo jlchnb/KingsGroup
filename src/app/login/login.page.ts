@@ -14,7 +14,7 @@ export class LoginPage implements OnInit {
    * cada clave tiene su valor inicial
    */
   user={
-    usuario:"",
+    user:"",
     password:""
   }
   // variable para mostrar el campo faltante
@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
   ingresar(){
     console.log(this.user)
     if (this.validateModel(this.user)) {
-      this.presentToast("top", "Bienvenido "+this.user.usuario);
+      this.presentToast("top", "Welcome "+this.user.user+"!");
       // Se declara e instancia un elemento de tipo NavigationExtras
       let navigationextras: NavigationExtras={
         state:{
@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
       }
       this.router.navigate(['/home'],navigationextras);
     }else{
-      this.presentToast("bottom","Falta "+this.field,4000);
+      this.presentToast("bottom","Missing the "+this.field,4000);
     }
     
   }
@@ -58,9 +58,9 @@ export class LoginPage implements OnInit {
   }
 
     /**
-   * Muestra un toast al usuario
+   * Muestra un toast al user
    * @param position Posición dónde se mostrará el mensaje
-   * @param message Mensaje a presentar al usuario
+   * @param message Mensaje a presentar al user
    * @param duration Duración el toast, este es opcional
    */
   async presentToast(position: 'top' | 'middle' | 'bottom',

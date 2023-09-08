@@ -4,17 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="bg-image no-scroll" padding>
   <ion-card>
-    <img alt="login_img" src="assets/img/login.png"/>
-    <ion-card-header>
-      <ion-card-title>Welcome back!</ion-card-title>
-    </ion-card-header>
-  
+    <img alt="login_img" src="assets/img/pngwing.com.png"/>
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">User</ion-label>
-        <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.user"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Password</ion-label>
@@ -22,7 +18,7 @@
       </ion-item>
       <ion-row>
         <ion-col>
-          <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
+          <ion-button expand="block" color="primary" (click)="ingresar()">Login/Register</ion-button>
         </ion-col>
       </ion-row>
     </ion-card-content>

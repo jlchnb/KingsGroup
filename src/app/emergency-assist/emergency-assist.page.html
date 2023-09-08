@@ -1,5 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons color="light"  slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Back Button</ion-title>
     <ion-title>emergency-assist</ion-title>
     
   </ion-toolbar>
@@ -8,7 +12,7 @@
 <ion-content [fullscreen]="true" class="ion-padding">
     
     
-    <img src="assets/img/emergency.png" width="60%" height="30%" expand="block" (click)="setOpen(true)">
+    <img src="assets/img/emergency.png" class="center-image" align-items="center "width="50%" height="30%" expand="block" (click)="setOpen(true)">
     <ion-modal [isOpen]="isModalOpen">
       <ng-template>
         <ion-header>
