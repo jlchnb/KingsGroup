@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
     if (this.validateModel(this.user)) {
       this.presentToast("top", "Welcome "+this.user.user+"!");
       // Se declara e instancia un elemento de tipo NavigationExtras
-      let navigationextras: NavigationExtras={
+      let navigationextras: NavigationExtras={        
         state:{
           user: this.user //Al state le asigno un objeto con clave valor
         }
