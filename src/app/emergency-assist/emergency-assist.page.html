@@ -4,15 +4,15 @@
       <ion-back-button default-href="#"></ion-back-button>
     </ion-buttons>
     <ion-title>Back Button</ion-title>
+    <ion-title>emergency-assist</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <img src="assets/img/emergency.png"
-     class="center-image clickable"
-     [ngClass]="{'expanded': isImageExpanded}"
-     (click)="animateAndOpenModal()">
-
+    
+    
+    <img src="assets/img/emergency.png" class="center-image" align-items="center "width="50%" height="30%" expand="block" (click)="setOpen(true)">
     <ion-modal [isOpen]="isModalOpen">
       <ng-template>
         <ion-header>
@@ -25,22 +25,21 @@
         </ion-header>
         <ion-content class="ion-padding">
           <p>
-            Our nearest worker is on the way!
+            On our way
 
             <img src="assets/img/maps.png" alt="">
           </p>
         </ion-content>
       </ng-template>
     </ion-modal>
-    
+    <ion-title size="large">Emergency assist</ion-title>
   <ion-header collapse="condense">
     <ion-toolbar>
       
       
     </ion-toolbar>
   </ion-header>
-  <div id="container" class="ion-text-center">
-    <strong>tap the icon above to quickly notify our nearest workers in your zone for help</strong><br>
-    <p>make sure to turn on gps</p>
+  <div id="container">
+    <p>tap the icon above to quickly notify our nearest workers in your zone for help</p>
   </div>
 </ion-content>

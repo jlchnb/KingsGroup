@@ -55,13 +55,13 @@ ion-card {
   transition: 400ms all ease-in-out;
 }
 
-
-.centered-image {
-  width: 35%;
-  height: 100%;
-  padding: auto;
+.centered-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
 }
 
-.centered-button {
-  color: tertiary;
+.centered-item img {
+  flex: 0 0 auto;
+  margin-right: 10px;
 }
