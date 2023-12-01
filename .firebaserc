@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "king-s-group": {
+      "hosting": {
+        "app": [
+          "king-s-group"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "king-s-group"
+  }
+}

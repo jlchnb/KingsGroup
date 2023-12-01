@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'landing-page',
     pathMatch: 'full'
+  },
+  {
+    path: 'landing-page',
+    loadChildren: () => import('./landing-page/landing-page.module').then( m => m.LandingPagePageModule)
   },
   {
     path: 'login',
@@ -27,10 +31,18 @@ const routes: Routes = [
     path: 'motorcycle-services',
     loadChildren: () => import('./motorcycle-services/motorcycle-services.module').then( m => m.MotorcycleServicesPageModule)
   },
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
 ];
 
 @NgModule({
-  imports: [
+  imports: [ 
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]

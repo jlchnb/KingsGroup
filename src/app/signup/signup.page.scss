@@ -21,7 +21,7 @@ ion-item{
     }
 }
 
-.signupLink{
+.signinLink{
     display: flex;
     margin: auto;
     flex-direction: row;
@@ -37,16 +37,6 @@ ion-item{
         font-size: 0.9rem;
     }
     a{
-        text-decoration: none;
-    }
-}
-
-.forgotPassword{
-    display: flex;
-    justify-content: flex-end;
-    a{
-        font-weight: 400;
-        font-size: 0.8rem;
         text-decoration: none;
     }
 }

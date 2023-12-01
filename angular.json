@@ -31,21 +31,20 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
-                  "type": "initial",
-                  "maximumWar: "2mb",
-                  "maximumError": "5mb"
+                  "type": "initial"
                 },
                 {
-                  "type": "anyComponentStyle",
-                  "maximumWar: "2kb",
-                  "maximumError": "4kb"
+                  "type": "anyComponentStyle"
                 }
               ],
               "fileReplacements": [
@@ -79,9 +78,7 @@
             "development": {
               "browserTarget": "app:build:development"
             },
-            "ci": {
-              
-            }
+            "ci": {}
           },
           "defaultConfiguration": "development"
         },
@@ -111,7 +108,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -128,6 +128,13 @@
               "src/**/*.ts",
               "src/**/*.html"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "app:build:production"
           }
         }
       }
